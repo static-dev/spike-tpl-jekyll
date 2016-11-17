@@ -14,6 +14,11 @@ This is the default template for use within [spike](https://github.com/static-de
 - `spike tpl add jekyll git@github.com:static-dev/spike-tpl-jekyll.git`
 - `spike new <projectname> -t jekyll`
 
+> NOTE: Because this template uses [Spike Collections](https://github.com/static-dev/spike-collections#installation), you cannot use the globally installed spike CLI with this template. Instead, you must use the locally installed spike via npm.
+
+- `npm start`
+
+
 ### Standalone
 
 [Spike](https://github.com/static-dev/spike) uses [sprout](https://github.com/carrot/sprout) internally to generate it's project templates. This means you can even use this template without [spike](https://github.com/static-dev/spike) by using [sprout](https://github.com/carrot/sprout) directly.
