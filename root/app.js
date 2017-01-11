@@ -12,11 +12,7 @@ const collections = new Collections({
   collections: {
     posts: {
       files: 'posts/**',
-      permalink: (p) => {
-        const match = p.match(/^(\d+-\d+-\d+).*/)
-        if (!match || !match[1]) throw new Error(`invalid date format: ${p}`)
-        return { date: match[1] }
-      },
+      permalinks: Collections.jekyll.date,
       paginate: {
         perPage: 3,
         template: 'views/_page_template.sgr',

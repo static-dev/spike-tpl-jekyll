@@ -13,11 +13,9 @@ This is the default template for use within [spike](https://github.com/static-de
 - `npm i spike -g`
 - `spike tpl add jekyll git@github.com:static-dev/spike-tpl-jekyll.git`
 - `spike new <projectname> -t jekyll`
+- `npm run watch`
 
 > NOTE: Because this template uses [Spike Collections](https://github.com/static-dev/spike-collections#installation), you cannot use the globally installed spike CLI with this template. Instead, you must use the locally installed spike via npm.
-
-- `npm start`
-
 
 ### Standalone
 
