@@ -1,5 +1,7 @@
 # Spike - Jekyll Template
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/static-dev/spike-tpl-jekyll.svg)](https://greenkeeper.io/)
+
 [![tests](http://img.shields.io/travis/static-dev/spike-tpl-base/master.svg?style=flat)](https://travis-ci.org/spike-tpl-base/spike-tpl-base) [![dependencies](http://david-dm.org/static-dev/spike-tpl-base.svg?path=root)](https://david-dm.org/static-dev/spike-tpl-base?path=root)
 
 A template that gives you jekyll-like static blog functionality for the latest [spike](https://github.com/static-dev/spike) version. Includes dynamic content with frontmatter, dates parsed from the file paths, and pagination. Can be configured to work with multiple collections.
