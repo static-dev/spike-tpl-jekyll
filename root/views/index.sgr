@@ -5,7 +5,7 @@ extends(src='layout.sgr')
     ul
       each(loop='post in _pages.posts[0].posts')
         li
-          a(href='{{ post._path }}') {{ post.title }}
+          a(href='{{ post._path.slice(0, -4) }}') {{ post.title }}
 
     if(condition='_pages.posts[1]')
       a(href='{{ _pages.posts[1].path }}') Next Page &raquo;
