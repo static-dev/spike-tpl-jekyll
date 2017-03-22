@@ -5,22 +5,22 @@ html
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
       meta(name='description' content='')
-      meta(name='author' content='amaze')
+      meta(name='author' content='<%= github_username %>')
       meta(name="viewport" content="width=device-width, initial-scale=1")
 
     block(name='title')
-      title Posts: Page {{ _currentPage.page }}
+      title My Cool Blog: Page {{ _currentPage.page }}
 
     block(name='stylesheets')
-      link(rel='stylesheet' href='css/index.css')
+      link(rel='stylesheet' href='/css/index.css')
 
   body(role='document')
     main(role='main' id='{{ pageId }}')
-      h1 Posts: Page {{ _currentPage.page }}
+      h1 My Cool Blog: Page {{ _currentPage.page }}
       ul
         each(loop='post in _currentPage.posts')
           li
-            a(href='{{ post._path }}') {{ post.title }}
+            a(href='{{ post._path.slice(0, -4) }}') {{ post.title }}
 
     block(name='javascript')
-      script(src='js/main.js' defer)
+      script(src='/js/main.js' defer)
