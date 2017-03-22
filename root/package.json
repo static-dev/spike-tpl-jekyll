@@ -15,7 +15,7 @@
     "spike-collections": "next",
     "spike-css-standards": "next",
     "spike-page-id": "^0.1.0"<% if (production) { %>,
-    "webpack": "^2.3.1"<% } %>
+    "webpack": "2.2.1"<% } %>
   },
   "devDependencies": {
     "ava": "^0.17.0",
