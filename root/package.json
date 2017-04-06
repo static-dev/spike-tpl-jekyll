@@ -8,22 +8,21 @@
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
-    "babel-preset-latest": "^6.14.0",
-    "hard-source-webpack-plugin": "0.3.6",<% if (production) { %>
-    "image-webpack-loader": "^2.0.0",<% } %>
-    "reshape-standard": "^0.4.0",
-    "spike": "^0.14.1",
-    "spike-collections": "^0.3.0",
-    "spike-css-standards": "^0.1.1",
-    "spike-page-id": "^0.1.0"<% if (production) { %>,
-    "webpack": "^1.13.1"<% } %>
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.1.8",
+    "reshape-standard": "^1.0.0",
+    "spike": "^1.0.0",
+    "spike-collections": "^1.0.2",
+    "spike-css-standards": "^1.0.0",
+    "spike-page-id": "^1.0.0"<% if (production) { %>,
+    "webpack": "^2.3.3"<% } %>
   },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "rimraf": "^2.5.4",
-    "snazzy": "^5.0.0",
-    "spike-core": "^0.13.1",
-    "standard": "^8.0.0"
+    "ava": "^0.19.0",
+    "rmfr": "^1.0.2",
+    "snazzy": "^6.0.0",
+    "spike-core": "^1.0.0",
+    "standard": "^10.0.0"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "main": "app.js",

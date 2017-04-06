@@ -1,8 +1,8 @@
 const path = require('path')
 const test = require('ava')
 const Sprout = require('sprout')
-// const Spike = require('spike-core')
-const rimraf = require('rimraf-promise')
+const Spike = require('spike-core')
+const rimraf = require('rmfr')
 const tmpdir = require('os-tmpdir')
 const W = require('when')
 const node = require('when/node')
@@ -10,9 +10,9 @@ const {exec} = require('child_process')
 
 const tplTestPath = path.join(__dirname, 'example')
 
-// test.cb.afterEach((t) => {
-//   rimraf(tplTestPath, () => { t.end() })
-// })
+test.cb.afterEach((t) => {
+  rimraf(tplTestPath, () => { t.end() })
+})
 
 test('compile test', (t) => {
   const Spike = require(path.join(tplTestPath, 'node_modules/spike-core'))

@@ -10,12 +10,12 @@
   },
   "bugs": "https://github.com/static-dev/spike-tpl-base/issues",
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^0.19.0",
     "os-tmpdir": "^1.0.1",
-    "rimraf-promise": "^2.0.0",
-    "spike-core": "^0.12.0",
-    "sprout": "1.x",
-    "when": "^3.7.7"
+    "rmfr": "^1.0.2",
+    "spike-core": "^1.0.0",
+    "sprout": "^1.2.1",
+    "when": "^3.7.8"
   },
   "homepage": "https://github.com/static-dev/spike-tpl-base",
   "keywords": [
