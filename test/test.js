@@ -10,12 +10,9 @@ const {exec} = require('child_process')
 
 const tplTestPath = path.join(__dirname, 'example')
 
-test.cb.afterEach((t) => {
-  rimraf(tplTestPath, () => { t.end() })
-})
+test.afterEach((t) => rimraf(tplTestPath))
 
-test('compile test', (t) => {
-  const Spike = require(path.join(tplTestPath, 'node_modules/spike-core'))
+test.skip('compile test', (t) => {
   const project = new Spike({ root: tplTestPath, env: 'production' })
   project.on('error', console.error)
   project.on('warning', console.error)
@@ -23,7 +20,7 @@ test('compile test', (t) => {
   project.compile()
 })
 
-test.only('initializes with sprout, compiles with spike', t => {
+test('initializes with sprout, compiles with spike', t => {
   const tplName = 'spike-tpl-base-test'
   const locals = { name: 'doge', description: 'wow', github_username: 'amaze', production: false }
   const sprout = new Sprout(tmpdir())

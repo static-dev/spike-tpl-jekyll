@@ -1,5 +1,5 @@
 {
-  "name": "spike-tpl-base",
+  "name": "spike-tpl-jekyll",
   "description": "Base template for latest spike version",
   "version": "0.0.0",
   "author": "Carrot Creative",
@@ -8,7 +8,7 @@
     "serial": "true",
     "files": "test/test.js"
   },
-  "bugs": "https://github.com/static-dev/spike-tpl-base/issues",
+  "bugs": "https://github.com/static-dev/spike-tpl-jekyll/issues",
   "devDependencies": {
     "ava": "^0.19.0",
     "os-tmpdir": "^1.0.1",
@@ -17,7 +17,7 @@
     "sprout": "^1.2.1",
     "when": "^3.7.8"
   },
-  "homepage": "https://github.com/static-dev/spike-tpl-base",
+  "homepage": "https://github.com/static-dev/spike-tpl-jekyll",
   "keywords": [
     "spike",
     "spike-template",
@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "main": "init.js",
-  "repository": "static-dev/spike-tpl-base",
+  "repository": "static-dev/spike-tpl-jekyll",
   "scripts": {
     "test": "ava"
   }

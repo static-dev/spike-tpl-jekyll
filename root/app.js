@@ -1,9 +1,9 @@
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
-const jsStandards = require('babel-preset-env')
-const dynamicImport = require('babel-plugin-syntax-dynamic-import')
+const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const Collections = require('spike-collections')
+const env = process.env.NODE_ENV
 
 const locals = {}
 const collections = new Collections({
@@ -33,9 +33,13 @@ module.exports = {
   },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
-    locals: (ctx) => { return collections.locals(ctx, Object.assign({ pageId: pageId(ctx) }, locals)) }
+    locals: (ctx) => { return collections.locals(ctx, Object.assign({ pageId: pageId(ctx) }, locals)) },
+    minify: env === 'production'
   }),
-  postcss: cssStandards(),
-  babel: { presets: [[jsStandards, { modules: false }]], plugins: [dynamicImport] },
+  postcss: cssStandards({
+    minify: env === 'production',
+    warnForDuplicates: env !== 'production'
+  }),
+  babel: jsStandards(),
   plugins: [collections]
 }
