@@ -12,7 +12,7 @@ html
       title Posts: Page {{ _currentPage.page }}
 
     block(name='stylesheets')
-      link(rel='stylesheet' href='css/index.css')
+      link(rel='stylesheet' href='/css/index.css')
 
   body(role='document')
     main(role='main' id='{{ pageId }}')
@@ -23,4 +23,4 @@ html
             a(href='{{ post._path }}') {{ post.title }}
 
     block(name='javascript')
-      script(src='js/main.js' defer)
+      script(src='/js/main.js' defer)
