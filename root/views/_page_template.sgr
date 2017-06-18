@@ -20,7 +20,7 @@ html
       ul
         each(loop='post in _currentPage.posts')
           li
-            a(href='{{ post._path }}') {{ post.title }}
+            a(href='/{{ post._path }}') {{ post.title }}
 
     block(name='javascript')
       script(src='/js/main.js' defer)
