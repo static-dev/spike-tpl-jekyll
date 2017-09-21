@@ -3,7 +3,7 @@ const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const Collections = require('spike-collections')
-const env = process.env.NODE_ENV
+const env = process.env.SPIKE_ENV
 
 const locals = {}
 const collections = new Collections({
@@ -12,14 +12,14 @@ const collections = new Collections({
     posts: {
       files: 'posts/**',
       permalinks: Collections.jekyll.date,
-      transform: (l) => {
+      transform: l => {
         const d = l._path.match(Collections.jekyll.regex)
         return Object.assign(l, { date: `${d[2]}/${d[3]}/${d[4]}` })
       },
       paginate: {
         perPage: 3,
-        template: 'views/_page_template.sgr',
-        output: (n) => `posts/page${n}.html`
+        template: 'views/page_template.html',
+        output: n => `posts/page${n}.html`
       }
     }
   }
@@ -27,18 +27,18 @@ const collections = new Collections({
 
 module.exports = {
   devtool: 'source-map',
-  matchers: {
-    html: '*(**/)*.sgr',
-    css: '*(**/)*.sss'
-  },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  ignore: ['**/layout.html', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
-    locals: (ctx) => { return collections.locals(ctx, Object.assign({ pageId: pageId(ctx) }, locals)) },
+    locals: ctx => {
+      return collections.locals(
+        ctx,
+        Object.assign({ pageId: pageId(ctx) }, locals)
+      )
+    },
     minify: env === 'production'
   }),
   postcss: cssStandards({
-    minify: env === 'production',
-    warnForDuplicates: env !== 'production'
+    minify: env === 'production'
   }),
   babel: jsStandards(),
   plugins: [collections]

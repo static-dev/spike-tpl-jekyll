@@ -1,26 +1,25 @@
 {
   "name": "<%= S(name).slugify().value() %>",
   "description": "<%= description %>",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "<%= github_username %>",
   "ava": {
     "verbose": "true"
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
-    "reshape-standard": "^1.1.0",
-    "spike": "^1.3.1",
-    "spike-collections": "^1.0.2",
-    "spike-css-standards": "^1.1.0",
+    "reshape-standard": "^3.1.1",
+    "spike": "^2.2.0",
+    "spike-collections": "^1.2.0",
+    "spike-css-standards": "^3.0.0",
     "spike-js-standards": "^2.0.2",
-    "spike-page-id": "^1.0.0",
-    "webpack": "^2.6.1"
+    "spike-page-id": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "rimraf": "^2.6.1",
+    "ava": "^0.22.0",
+    "rimraf": "^2.6.2",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.3"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "main": "app.js",

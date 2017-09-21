@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <block name='meta'>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'>
+      <meta name='description' content=''>
+      <meta name='author' content='<%= github_username %>'>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </block>
+
+    <block name='title'>
+      <title>{{ title }}</title>
+    </block>
+
+    <block name='stylesheets'>
+      <link rel='stylesheet' href='/css/index.css' />
+    </block>
+  </head>
+
+  <body>
+    <main id='{{ pageId }}'>
+      <h1>{{ title }}</h1>
+      <date>{{ date }}</date>
+      <small>by: {{ author }}</small>
+      <block name='content'></block>
+    </main>
+
+    <block name='javascript'>
+      <script src='/js/main.js' defer></script>
+    </block>
+  </body>
+</html>
