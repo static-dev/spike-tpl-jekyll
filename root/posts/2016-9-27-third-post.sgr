@@ -1,8 +1,0 @@
----
-title: 'Post Number Three'
-author: 'Cactus'
----
-
-extends(src='../views/_post_template.sgr')
-  block(name='content')
-    .body(md) Number three, we're really getting going now!

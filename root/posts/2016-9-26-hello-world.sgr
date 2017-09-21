@@ -1,8 +1,0 @@
----
-title: 'Hello World!'
-author: 'Spike'
----
-
-extends(src='../views/_post_template.sgr')
-  block(name='content')
-    .body(md) Wow, what a **cool** post!

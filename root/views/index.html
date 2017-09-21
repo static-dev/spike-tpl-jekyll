@@ -1,0 +1,17 @@
+<extends src='layout.html'>
+  <block name='content'>
+    <h1>My Cool Blog</h1>
+
+    <ul>
+      <each loop='post in _pages.posts[0].posts'>
+        <li>
+          <a href='{{ post._path }}'>{{ post.title }}</a>
+        </li>
+      </each>
+    </ul>
+
+    <if condition='_pages.posts[1]'>
+      <a href='{{ _pages.posts[1].path }}'>Next Page &raquo;</a>
+    </if>
+  </block>
+</extends>

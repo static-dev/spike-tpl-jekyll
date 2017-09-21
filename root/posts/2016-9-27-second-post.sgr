@@ -1,8 +1,0 @@
----
-title: 'Second Post!'
-author: 'Spike'
----
-
-extends(src='../views/_post_template.sgr')
-  block(name='content')
-    .body(md) Hello there, it's my second post!
